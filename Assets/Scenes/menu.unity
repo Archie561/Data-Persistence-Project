@@ -315,8 +315,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93b09553c85fd8a4da44cf4125575043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onScoreBeated:
+    m_PersistentCalls:
+      m_Calls: []
   userName: 
-  score: 0
+  bestUserName: 
+  points: 0
+  bestPoints: 0
 --- !u!1 &800375911
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,7 +607,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Best score: Archie: 25 '
+  m_Text: 'Best score: :  '
 --- !u!222 &1004814248
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1203,6 +1208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _nameField: {fileID: 1492668646}
+  bestScoreText: {fileID: 1004814247}
 --- !u!114 &1963525569
 MonoBehaviour:
   m_ObjectHideFlags: 0

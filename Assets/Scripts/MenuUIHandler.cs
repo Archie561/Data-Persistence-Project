@@ -8,11 +8,25 @@ public class MenuUIHandler : MonoBehaviour
 {
     [SerializeField]
     private InputField _nameField;
+    [SerializeField]
+    private Text bestScoreText;
+
+    private void Start()
+    {
+        DataManager.instance.onScoreBeated.AddListener(ShowBestScore);
+        ShowBestScore();
+    }
 
     private void Awake()
     {
         if (DataManager.instance.userName != null)
             _nameField.text = DataManager.instance.userName;
+    }
+
+    private void ShowBestScore()
+    {
+        DataManager.instance.LoadData();
+        bestScoreText.text = $"Best score: {DataManager.instance.bestUserName}: {DataManager.instance.bestPoints}";
     }
 
     public void StartGame()
